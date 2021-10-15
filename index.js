@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// Answer: "nestedFunction" is contained within the scope of the Higher Order function "myFunction" which is defining the variable "internal" for the nestedFunctions use. They are both contained inside the function.
 
 
 
@@ -28,10 +28,14 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
 
+function summation(number) {
+    let count = 1;
+    for(let i = 1; i < 10 ; i++) {
+      return count * number;
+    }   
   }
+console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,10 +60,22 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+//   function getFinals(data) {
+//     const allFinals = data.filter(function(item){
+//         return item.Stage === 'Final';
+//     });
+//     return allFinals;
+// }
+// console.log('Task 2:', getFinals(fifaData));
+
+
+  function animalNames(data) {
+      const displayNames = data.forEach(function(item){
+        return `name: ${item[0]}, scientific: ${item[2]}`
+      });
+      return displayNames;
   }
-  
+  console.log('Task 2:', animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -67,19 +83,26 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCaseAnimals = array.map(function(item){
+        return item.animal_name.toLowerCase();
+    }); 
+    return lowerCaseAnimals;
   }
-  
+  console.log('Task 2:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const atRisk = array.filter(function(item){
+      return item.population < 5;
+    })
+    return atRisk;
   }
+  console.log('Task 3:', lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -88,9 +111,14 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    const totalPop = array.reduce(function(acc, item){
+      return acc + item.population;
+    }, 0);
+    return totalPop;
   }
+
+  console.log(USApop(zooAnimals));
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -101,7 +129,7 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
+  function consume(a, b, callback){
     /*Your Code Here */
   }
  
@@ -123,9 +151,11 @@ function multiply(/*Your Code Here */){
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(first, last){
+
+   return `Hello ${first} ${last}, nice to meet you!`;
   }
+  console.log(greeting('Leah', 'Ball'));
   
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
