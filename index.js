@@ -130,29 +130,30 @@ const zooAnimals = [
   */
 
   function consume(a, b, callback){
-    /*Your Code Here */
+
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(num1, num2){
+    return num1 + num2;
   }
+  console.log(add(7, 6));
 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+function multiply(num1, num2){
+  return num1 * num2;  
+}
+console.log(multiply(7, 6));
 
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(first, last){
-
    return `Hello ${first} ${last}, nice to meet you!`;
   }
   console.log(greeting('Leah', 'Ball'));
@@ -169,8 +170,8 @@ function greeting(first, last){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(length, width, height){
+  
 }
 
 

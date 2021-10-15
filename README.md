@@ -25,14 +25,23 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+they are all Higher order functions that return a new array. Think of the .map method as a way to convert data into other useful bits, reduce allows us to simplify an array down to a single value algorithmically and filter allows us to sort data using truthy value into a new array. 
 
 2. Explain the difference between a callback and a higher order function.
+Higher Order functions receives other functions as callbacks, a Callback is passed into Higher Order functions as arguments.
 
 3. Explain what a closure is.
+A closer happens when an inner function reaches into an outer function to grab a value defined in the outer function. It uses lexical scope to define where a variable's belonging is and allows us to put functions together and use code that exists elsewhere.
 
 4. Describe the four principles of the 'this' keyword.
+these four principles help the developer determine what gets "this"
+  1. Global Binding - when in the global scope the value of "this" will be the window/console object
+  2. Implicit Binding - whenever a function is called by a proceeding dot, the object left of the dot get the "this"
+  3. New Binding - whenever a constructor function is used, "this" refers to the specific instance of the object that is created and returned by the constructor function.
+  4. Explicit Binding - whenever JavaScript's "call" or "apply" method is used, this is explicitly defined.
 
 5. Why do we need super() in an extended class?
+it acts like .call and bind and is used with extend to pass any new attributes back up to the constructor of the parent object.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
